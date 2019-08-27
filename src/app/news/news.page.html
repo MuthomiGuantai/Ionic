@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage(article)" >
+        <ion-card-header>
+        
+          <ion-card-title>{{article.titte}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <ion-img [src]="article.urlToImage"></ion-img>
+          <p>{{article.description}}</p>
+          <ion-card-subtitle>{{article.author}}</ion-card-subtitle>  
+        </ion-card-content>
+      </ion-card>
+      
+
+</ion-content>
